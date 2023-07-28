@@ -1,0 +1,13 @@
+/* style.css */
+
+/* Fond d'écran en gris pâle */
+body {
+    background-color: #514f4fc7; /* gris */
+}
+
+.btn:hover{
+    color: #fff;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    animation: rotate 0.7s ease-in-out both;
+}

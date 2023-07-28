@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<!-- A website to check if the Hex code gives the right color -->
+<!-- https://www.rapidtables.com/convert/color/hex-to-rgb.html -->
+
+<head>
+  <title>Color Generator</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- CSS style -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <main id="app">
+    <div class="container">
+
+      <div class="row justify-content-center">
+        <div class="col-2"> 
+          <!-- Show message for each copy if (success or not) -->
+          <div v-if="showSuccessAlert" class="alert alert-success alert-d" role="alert">
+            <h8 class="alert-heading">{{message}}</h8>
+          </div>    
+        </div>
+      </div>
+
+      <!-- Heading for the color palette generator -->
+      <h1 class="text-center fw-bolder py-5">Color palette generator</h1>
+
+      <div class="colors d-flex justify-content-center">
+        <!-- Empty column before the cards -->
+        <div class="col-1"></div>
+
+        <div class="col-10">
+          <!-- Cards container -->
+          <div class="row">
+            <div v-for="color in colors" class="colored col-2" :id="color" @click="handleCopy(color)">
+              <div class="card p-2">
+                <!-- The colored card -->
+                <div class="card p-lg-3" :style="{ backgroundColor: color, height: '250px' }"></div>
+                <!-- The color's HEX code -->
+                <h8 class="text-center p-2 fw-bolder" id="name">{{ color }}</h8>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Empty column after the cards -->
+        <div class="col-1"></div>
+      </div>
+
+      <!-- The button and explanation for the Web App -->
+      <div class="my-xl-5 w-100 text-center">
+        <!-- Button to generate the colors -->
+        <a name="" @click="calculate" id="" class="btn btn-outline-secondary" href="#" role="button">
+          Generate palette
+        </a>
+        <!-- Text to explain how to use the web App -->
+        <p class="text-center fw-bold">
+          Or just press the "spacebar" to generate new palettes.
+        </p>
+        <!-- Text to click to copy individual color -->
+        <h8>click to copy individual color</h8>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+  <!-- Vue js 3 -->
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>
