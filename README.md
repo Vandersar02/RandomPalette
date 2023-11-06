@@ -3,9 +3,8 @@ RandomPalette
 ```markdown
 # Color Palette Generator
 
-This is a simple web application that generates random color palettes and allows users to copy individual color codes. It's built using HTML, Vue.js, and CSS.
+This is a simple web application that generates random color palettes and allows users to copy individual color codes. It's built using HTML, javascript, and CSS.
 
-![Color Palette Generator](screenshot.png)
 
 ## Features
 
