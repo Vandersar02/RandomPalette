@@ -15,7 +15,7 @@ This is a simple web application that generates random color palettes and allows
 
 ## How to Use
 
-1. Visit the [Color Palette Generator](https://your-github-username.github.io/color-palette-generator/) online.
+1. Visit the [Color Palette Generator](https://Vandersar02.github.io/color-palette-generator/) online.
 2. Click the "Generate palette" button to create a new color palette.
 3. Click on a color to copy its code to the clipboard.
 4. Optionally, press the spacebar to generate new palettes.
@@ -27,7 +27,7 @@ If you want to run the application locally, follow these steps:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-github-username/color-palette-generator.git
+   git clone https://github.com/Vandersar02/color-palette-generator.git
    ```
 
 2. Open the `index.html` file in your web browser to view the application.
